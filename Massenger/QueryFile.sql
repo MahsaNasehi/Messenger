@@ -1,6 +1,7 @@
 ## create queries
 CREATE TABLE IF NOT EXISTS user(
     user_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_name VARCHAR(15) UNIQUE ,
     first_name VARCHAR(10) NOT NULL ,
     last_name VARCHAR(10) NOT NULL ,
     phone_number CHAR(11) UNIQUE NOT NULL
@@ -50,13 +51,13 @@ CREATE TABLE IF NOT EXISTS  msg(
 
 
 ## insert queries
-INSERT INTO user(first_name, last_name, phone_number) VALUES
-    ('mahsa', 'nasehi', '09111111111'),
-    ('mahya', 'nasehi', '09111111112'),
-    ('parisa', 'sia', '09111111113'),
-    ('sara', 'gerami', '09111111114'),
-    ('mona', 'eradi', '09111111115'),
-    ('zahra', 'saha', '09111111116');
+INSERT INTO user(user_name, first_name, last_name, phone_number) VALUES
+    ('u1', 'mahsa', 'nasehi', '09111111111'),
+    ('u2', 'mahya', 'nasehi', '09111111112'),
+    ('u3', 'parisa', 'sia', '09111111113'),
+    ('u4', 'sara', 'gerami', '09111111114'),
+    ('u5', 'mona', 'eradi', '09111111115'),
+    ('u6', 'zahra', 'saha', '09111111116');
 
 
 INSERT INTO contacts(user_id, user_s_contact_id) VALUES
