@@ -1,7 +1,9 @@
 from fastapi import FastAPI
-import database_connection as mydb
-import insertion, selection
 
+import database_connection as mydb
+import insertion
+import selection
+import update
 # this class is for responding
 from models import User, PV, Group, GroupMember, Message, Contact
 
@@ -89,22 +91,23 @@ def select_pv_by_id(id: int):
 
 
 # update methods
+# both json and param format is allowed in request
 @app.patch("/update_user/")
 def update_user(user_id, field_to_update, new_value):
-    result = mydb.update_user(user_id, field_to_update, new_value)
+    result = update.update_user(user_id, field_to_update, new_value)
     return result
 
 
 @app.patch("/update_group/")
 def update_group(group_id, field_to_update, new_value):
-    result = mydb.update_group(group_id, field_to_update, new_value)
+    result = update.update_group(group_id, field_to_update, new_value)
     return result
 
 
 # update msg means editing its content
 @app.patch("/update_msg_content/")
-def update_message(msg_id, field_to_update, new_value):
-    result = mydb.update_massage(msg_id, field_to_update, new_value)
+def update_message(msg_id, new_value):
+    result = update.update_massage(msg_id, "content", new_value)
     return result
 
 

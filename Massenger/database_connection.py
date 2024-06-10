@@ -46,7 +46,7 @@ class DatabaseConnection:
             self.connection_cursor.close()
             self.db_connector_obj.close()
 
-# TODO
+#
 # # update
 # def update_user(user_id, field_to_update, new_value):
 #     sql = f"UPDATE user SET {field_to_update} = %s WHERE user_id = %s"
@@ -80,7 +80,7 @@ class DatabaseConnection:
 #     except Exception as e:
 #         return "Error while updating"
 #
-#
+#TODO
 # # delete
 # def delete_user_by_userid(userid):
 #     sql_formula = "DELETE FROM user WHERE user_id = %s;"
