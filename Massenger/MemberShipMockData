@@ -1,0 +1,54 @@
+# Group one
+{
+    "group_chat_id" : 1,
+    "member_id" : 1
+}
+{
+    "group_chat_id" : 1,
+    "member_id" : 2
+}
+{
+    "group_chat_id" : 1,
+    "member_id" : 3
+}
+{
+    "group_chat_id" : 1,
+    "member_id" : 4
+}
+
+# Group two
+{
+    "group_chat_id" : 2,
+    "member_id" : 2
+}
+{
+    "group_chat_id" : 2,
+    "member_id" : 3
+}
+{
+    "group_chat_id" : 2,
+    "member_id" : 4
+}
+{
+    "group_chat_id" : 2,
+    "member_id" : 5
+}
+
+
+# Group three
+{
+    "group_chat_id" : 3,
+    "member_id" : 3
+}
+{
+    "group_chat_id" : 3,
+    "member_id" : 4
+}
+{
+    "group_chat_id" : 3,
+    "member_id" : 5
+}
+{
+    "group_chat_id" : 3,
+    "member_id" : 6
+}

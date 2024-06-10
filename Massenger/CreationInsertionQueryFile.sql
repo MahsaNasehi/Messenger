@@ -4,7 +4,9 @@ CREATE TABLE IF NOT EXISTS user(
     user_name VARCHAR(15) UNIQUE ,
     first_name VARCHAR(10) NOT NULL ,
     last_name VARCHAR(10) NOT NULL ,
-    phone_number CHAR(11) UNIQUE NOT NULL
+    phone_number CHAR(11) UNIQUE NOT NULL,
+    birth_date DATE,
+    join_date DATE NOT NULL
 );
 
 
@@ -61,13 +63,14 @@ CREATE TABLE IF NOT EXISTS  msg(
 #     END
 # #     // DELIMITER ;
 ## insert queries
-INSERT INTO user(user_name, first_name, last_name, phone_number) VALUES
-    ('u1', 'mahsa', 'nasehi', '09111111111'),
-    ('u2', 'mahya', 'nasehi', '09111111112'),
-    ('u3', 'parisa', 'sia', '09111111113'),
-    ('u4', 'sara', 'gerami', '09111111114'),
-    ('u5', 'mona', 'eradi', '09111111115'),
-    ('u6', 'zahra', 'saha', '09111111116');
+INSERT INTO user(user_name, first_name, last_name, phone_number, birth_date, join_date) VALUES
+    ('u1', 'mahsa', 'nasehi', '09111111111', '2003-08-06', '2009-10-04'),
+    ('u2', 'mahya', 'nasehi', '09111111112', '2010-01-05', '2009-10-04'),
+    ('u3', 'parisa', 'sia', '09111111113', '2013-08-06', '2019-01-04'),
+    ('u4', 'sara', 'gerami', '09111111114', '2001-01-16', '2009-10-04'),
+    ('u5', 'mona', 'eradi', '09111111115', '2003-08-06', '2009-10-04'),
+    ('u6', 'zahra', 'saha', '09111111116', '2003-08-06', '2009-10-04'),
+    ('Tom_kane', 'Tom', 'Kane', '4473427800', '2003-03-24', '2021-10-04');
 
 INSERT INTO user(user_name, first_name, last_name, phone_number) VALUES
     ('u7', 'mahan', 'nasehi', '09111111117');

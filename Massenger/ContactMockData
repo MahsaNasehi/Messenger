@@ -1,0 +1,36 @@
+# contacts of user 1
+{
+    "users_id" : 1,
+    "users_contact_id" : 2
+}
+{
+    "users_id" : 1,
+    "users_contact_id" : 3
+}
+{
+    "users_id" : 1,
+    "users_contact_id" : 4
+}
+{
+    "users_id" : 1,
+    "users_contact_id" : 5
+}
+
+
+# contacts of user 2
+{
+    "users_id" : 2,
+    "users_contact_id" : 1
+}
+{
+    "users_id" : 2,
+    "users_contact_id" : 6
+}
+{
+    "users_id" : 2,
+    "users_contact_id" : 7
+}
+{
+    "users_id" : 2,
+    "users_contact_id" : 5
+}

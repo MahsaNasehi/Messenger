@@ -7,6 +7,7 @@ class User(BaseModel):
     first_name: str
     last_name: str
     phone_number: str
+    join_date: str
 
 
 class Group(BaseModel):
@@ -20,11 +21,15 @@ class PV(BaseModel):
 
 class GroupMember(BaseModel):
     group_chat_id: int
-    member_id: str
+    member_id: int
 
+
+class Contact(BaseModel):
+    users_id: int
+    users_contact_id: int
 
 class Message(BaseModel):
     chat_id: int
-    pv_id: int
+    is_group_chat: bool
     sender_id: int
     content: str
