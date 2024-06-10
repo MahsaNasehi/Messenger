@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 import database_connection as mydb
-import insertion
+import insertion, selection
 
+# this class is for responding
 from models import User, PV, Group, GroupMember, Message, Contact
 
 app = FastAPI()
@@ -53,37 +54,37 @@ def contact_create(cnct: Contact):
 # read and select
 @app.get("/read_user_by_id/")
 def select_user_by_id(id: int):
-    result = mydb.select_usertable_by_userid(id)
+    result = selection.select_usertable_by_userid(id)
     return result
 
 
 @app.get("/read_contact_by_id/")
 def select_contact_by_id(id: int):
-    result = mydb.select_contactstable_by_userid(id)
+    result = selection.select_contactstable_by_userid(id)
     return result
 
 
 @app.get("/read_group_by_id/")
 def select_group_by_id(id: int):
-    result = mydb.select_grouptable_by_id(id)
+    result = selection.select_grouptable_by_id(id)
     return result
 
 
 @app.get("/read_group_member_by_id/")
 def select_group_member_by_id(id: int):
-    result = mydb.select_group_membertable_by_userid(id)
+    result = selection.select_group_membertable_by_userid(id)
     return result
 
 
 @app.get("/read_msg_by_id/")
 def select_msg_by_id(id: int):
-    result = mydb.select_msgtable_by_userid(id)
+    result = selection.select_msgtable_by_userid(id)
     return result
 
 
 @app.get("/read_pv_by_id/")
 def select_pv_by_id(id: int):
-    result = mydb.select_pvtable_by_userid(id)
+    result = selection.select_pvtable_by_userid(id)
     return result
 
 

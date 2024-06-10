@@ -1,4 +1,3 @@
-import mysql.connector
 import check_query
 
 import database_connection
