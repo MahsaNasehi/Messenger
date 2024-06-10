@@ -1,9 +1,10 @@
 from fastapi import FastAPI
 
-import database_connection as mydb
 import insertion
 import selection
 import update
+import delete
+
 # this class is for responding
 from models import User, PV, Group, GroupMember, Message, Contact
 
@@ -114,35 +115,35 @@ def update_message(msg_id, new_value):
 # delete methods
 @app.delete("/delete_user_by_id/")
 def delete_user_by_id(id: int):
-    result = mydb.delete_user_by_userid(id)
+    result = delete.delete_user_by_userid(id)
     return result
 
 
 @app.delete("/delete_contact_by_ids/")
 def delete_contact_by_id(user_id: int, contact_id: int):
-    result = mydb.delete_contact(user_id, contact_id)
+    result = delete.delete_contact(user_id, contact_id)
     return result
 
 
 @app.delete("/delete_group_by_id/")
 def delete_group_by_id(chat_id: int):
-    result = mydb.delete_group(chat_id)
+    result = delete.delete_group(chat_id)
     return result
 
 
 @app.delete("/delete_group_member_by_ids/")
 def delete_group_member_by_id(chat_id: int, member_id: int):
-    result = mydb.delete_group_member(chat_id, member_id)
+    result = delete.delete_group_member(chat_id, member_id)
     return result
 
 
 @app.delete("/delete_msg_by_id/")
 def delete_msg_by_id(msg_id: int):
-    result = mydb.delete_msg(msg_id)
+    result = delete.delete_msg(msg_id)
     return result
 
 
 @app.delete("/delete_pv_by_id/")
 def delete_pv_by_id(chat_id: int):
-    result = mydb.delete_pv(chat_id)
+    result = delete.delete_pv(chat_id)
     return result
