@@ -1,12 +1,10 @@
 from fastapi import FastAPI
 
-import insertion
-import selection
-import update
-import delete
+from Model.DML import insertion, update
+from Model.DML import delete, selection
 
 # this class is for responding
-from models import User, PV, Group, GroupMember, Message, Contact
+from Model.models import User, PV, Group, GroupMember, Message, Contact
 
 app = FastAPI()
 

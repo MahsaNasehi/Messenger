@@ -1,4 +1,4 @@
-import database_connection
+from Model.DB_Connection import database_connection
 
 connection = database_connection.DatabaseConnection()
 

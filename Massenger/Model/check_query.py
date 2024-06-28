@@ -1,4 +1,4 @@
-import database_connection
+from Model.DB_Connection import database_connection
 
 # this class is for checking extra constraints
 
