@@ -26,4 +26,3 @@ JOIN group_membership gm ON u1.user_id = gm.member_id
 JOIN group_chat g ON gm.chat_id = g.chat_id
 JOIN msg m ON g.chat_id = m.chat_id AND u1.user_id = m.sender_id
 ORDER BY u1.first_name, u1.last_name;
- # hi
