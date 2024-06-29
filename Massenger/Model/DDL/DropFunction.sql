@@ -1,0 +1,1 @@
+drop function count_messages_between_users;

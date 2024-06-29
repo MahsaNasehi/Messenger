@@ -81,3 +81,6 @@ def message_insertion(message):
             return "Error while Adding"
     else:
         return "You are not member of this chat"
+
+
+# connection.close_connection()

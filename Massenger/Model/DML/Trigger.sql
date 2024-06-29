@@ -1,16 +1,16 @@
 CREATE TRIGGER log_user_insert AFTER INSERT ON user
 FOR EACH ROW
 BEGIN
-  INSERT INTO log_table (timestamp, operation, table_name, record_id, new_data)
-  VALUES (NOW(), 'INSERT', 'User', NEW.user_id, NEW);  -- Use JSON to store new data
+  INSERT INTO log_table (timestamp, operation, table_name, record_id, user_info)
+  VALUES (NOW(),'INSERT', 'User', NEW.user_id, USER());
 END;
 
 
 CREATE TRIGGER log_user_update AFTER UPDATE ON user
 FOR EACH ROW
 BEGIN
-  INSERT INTO log_table (timestamp, operation, table_name, record_id, old_data, new_data)
-  VALUES (NOW(), 'UPDATE', 'User', NEW.user_id, OLD, NEW);
+  INSERT INTO log_table (timestamp, operation, table_name, record_id, user_info)
+  VALUES (NOW(), 'UPDATE', 'User', NEW.user_id, USER());
 END;
 
 
@@ -18,6 +18,6 @@ END;
 CREATE TRIGGER log_user_delete AFTER DELETE ON user
 FOR EACH ROW
 BEGIN
-  INSERT INTO log_table (timestamp, operation, table_name, record_id)
-  VALUES (NOW(), 'DELETE', 'User', OLD.user_id);
+  INSERT INTO log_table (timestamp, operation, table_name, record_id, user_info)
+  VALUES (NOW(), 'DELETE', 'User', OLD.user_id, USER());
 END;

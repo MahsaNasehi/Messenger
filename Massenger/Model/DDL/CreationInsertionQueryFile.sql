@@ -57,8 +57,7 @@ CREATE TABLE IF NOT EXISTS log_table (
   operation VARCHAR(20) NOT NULL,  -- INSERT, UPDATE, DELETE
   table_name VARCHAR(50) NOT NULL,
   record_id INT,  -- Foreign key to the specific table's ID
-  old_data TEXT,  -- Optional: Store old data for UPDATE operations
-  new_data TEXT   -- Optional: Store new data for UPDATE operations
+  user_info VARCHAR(20)
 );
 
 ## insert queries

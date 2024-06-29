@@ -14,6 +14,7 @@ app = FastAPI()
 def user_create(user: User):
     # save the user in db
     result = insertion.user_insertion(user)
+
     return result
 
 
