@@ -51,17 +51,16 @@ CREATE TABLE IF NOT EXISTS  msg(
     FOREIGN KEY (sender_id) REFERENCES user(user_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-# # trigger for constraint in msg
-#     CREATE TRIGGER enforce_one_not_null_msg BEFORE INSERT ON msg
-#     FOR EACH ROW
-#     BEGIN
-#         IF NEW.chat_id IS NULL AND NEW.pv_id IS NULL THEN
-#             SIGNAL SQLSTATE '45000'  'Either chat_id or pv_id must be not null';
-#         ELSEIF NEW.chat_id IS NOT NULL AND NEW.pv_id IS NOT NULL THEN
-#                 SIGNAL SQLSTATE '45000' SET MESSAGE 'Only one of chat_id or pv_id can be not null';
-#         END IF;
-#     END
-# #     // DELIMITER ;
+CREATE TABLE IF NOT EXISTS log_table (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  timestamp DATETIME NOT NULL,
+  operation VARCHAR(20) NOT NULL,  -- INSERT, UPDATE, DELETE
+  table_name VARCHAR(50) NOT NULL,
+  record_id INT,  -- Foreign key to the specific table's ID
+  old_data TEXT,  -- Optional: Store old data for UPDATE operations
+  new_data TEXT   -- Optional: Store new data for UPDATE operations
+);
+
 ## insert queries
 INSERT INTO user(user_name, first_name, last_name, phone_number, birth_date, join_date) VALUES
     ('u1', 'mahsa', 'nasehi', '09111111111', '2003-08-06', '2009-10-04'),
