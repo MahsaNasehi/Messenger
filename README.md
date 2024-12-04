@@ -39,9 +39,9 @@ Group chat is a feature that allows users to create a group and share their mess
 3. Install and start Docker Desktop
 4. Build and Start the Containers
    ```bash
-       docker compose up -d
+      docker compose up -d
    ```
-5.Install FastAPI and Uvicorn
+5. Install FastAPI and Uvicorn
    ```bash
       pip install fastapi uvicorn
    ```
@@ -49,6 +49,7 @@ Group chat is a feature that allows users to create a group and share their mess
    ```bash
        fastapi run response_controller.py
    ```
+   
 
 ## Endpoints
 
