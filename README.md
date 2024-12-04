@@ -1,7 +1,6 @@
 # Messenger DataBase Design
 ## Overview
 The primary goal of this project is to familiarize ourselves with the process of database-side development and implement a simple web app in the form of a messaging platform, similar to popular platforms like Telegram. However, in this project, the focus is mainly on the database aspect, while other components are implemented at a minimal and very basic level.
-<img src="https://github.com/MahsaNasehi/TicTacToe-Game/assets/116074621/61c989a0-c4a1-41ed-9043-359700fbf7e2" width="400" height="500">
 
 ## Database Design Includes the Following:
 ### User Account
@@ -32,23 +31,23 @@ Group chat is a feature that allows users to create a group and share their mess
 ## Installation
 
 1. Clone this repository to your local machine:
-```bash
-git clone https://github.com/MahsaNasehi/Messenger.git
-```
+   ```bash
+      git clone https://github.com/MahsaNasehi/Messenger.git
+   ```
 2. Open the project in your preferred IDE (e.g., VS Code, or Pycharm).
 
 3. Install and start Docker Desktop
 4. Build and Start the Containers
    ```bash
-    docker compose up -d
+       docker compose up -d
    ```
 5.Install FastAPI and Uvicorn
-```bash
-pip install fastapi uvicorn
-```
+   ```bash
+      pip install fastapi uvicorn
+   ```
 6. Navigate into the directory of project(in the Controller dir) and run the Fastapi:
    ```bash
-    fastapi run response_controller.py
+       fastapi run response_controller.py
    ```
 
 ## Endpoints
