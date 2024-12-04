@@ -57,29 +57,44 @@ in the (Model\Advanced_Queries\SpecialQueries.sql) dir
 ## Endpoints
 ### (POST)
 /pv_create/: For creating a private chat
+
 /group_create/: For creating a group
+
 /group_member_addition/: For adding members to groups
+
 /msg_create/: For sending a message in a group
 
 ### (GET)
 /read_user_by_id/: Takes a specific ID and returns the corresponding user.
+
 /read_contact_by_id/: Takes a user’s ID and returns the IDs of their contacts.
+
 /read_group_by_id/: Takes a group ID and returns the name of the group.
+
 /read_group_member_by_id/: Takes a group ID and returns the IDs of its members.
+
 /read_msg_by_id/: Takes a message ID and returns the remaining details of the message.
+
 /read_pv_by_id/: Takes a private chat ID and returns the IDs of the two related users.
 
 ### (PATCH)
 /update_user/: Updates the user's information based on the specified field.
+
 /update_group/: Updates the name of the group.
+
 /update_msg_content/: Edits the content of a message.
 
 ### (DELETE)
 /delete_user_by_id/: Deletes a user from the messaging platform using their ID.
+
 /delete_contact_by_ids/: Removes a specific contact from the contact list using their ID.
+
 /delete_group_by_id/: Deletes a group using its ID.
+
 /delete_group_member_by_ids/: Removes a user from a group using their ID.
+
 /delete_pv_by_id/: Deletes a private chat using its ID.
+
 /delete_msg_by_id/: Deletes a message from a group using its ID.
 
 ## License
